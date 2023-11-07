@@ -1,0 +1,93 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "react-native/react-native": true
+  },
+  "settings": {
+    "jsx": true,
+    "import/resolver": {
+      "babel-module": {},
+      "alias": {
+        "map": [["@", "./src/"]],
+        "extensions": [".ts", ".tsx", ".js", ".jsx", ".json"]
+      }
+    }
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "airbnb/hooks", "prettier", "eslint-config-prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-native", "prettier", "@typescript-eslint"],
+  "rules": {
+    "indent": "off",
+    "no-unused-vars": "off",
+    "no-console": "off",
+    "semi": 0,
+    "func-names": "off",
+    "quotes": "error",
+    "no-plusplus": 0,
+    "react/function-component-definition": [2, {"namedComponents": "arrow-function"}],
+    "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx", ".ts", ".tsx"]}],
+    "react/require-default-props": [0],
+    "react/prop-types": [0],
+    "react/no-unstable-nested-components": [0],
+    "react/jsx-props-no-spreading": ["error", {"custom": "ignore"}],
+    "react/no-unused-prop-types": [1],
+    "react/no-array-index-key": [0],
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": false,
+        "trailingComma": "none",
+        "singleQuote": true,
+        "printWidth": 120,
+        "endOfLine": "auto"
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "spaced-comment": "off",
+    "arrow-body-style": [0],
+    "global-require": "off",
+    "no-shadow": "off",
+    "no-param-reassign": [2, {"props": false}],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "import/prefer-default-export": "off",
+    "react-native/no-unused-styles": 2,
+    "react-native/no-inline-styles": 2,
+    "react-native/no-color-literals": 0,
+    "react-native/no-raw-text": "off",
+    "react-native/no-single-element-style-arrays": 2,
+    "no-nested-ternary": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-useless-return": "off",
+    "consistent-return": "off",
+    "jsx-a11y/anchor-is-valid": "off"
+  },
+  "overrides": [
+    {
+      "files": ["src/features/*/*"],
+      "rules": {
+        "no-param-reassign": "off"
+      }
+    }
+  ]
+}
